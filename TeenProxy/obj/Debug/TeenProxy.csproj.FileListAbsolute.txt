@@ -1,0 +1,11 @@
+G:\projects\WebSites\TeenCheckin2014\TeenProxy\bin\Debug\TeenProxy.dll
+G:\projects\WebSites\TeenCheckin2014\TeenProxy\bin\Debug\TeenProxy.pdb
+G:\projects\WebSites\TeenCheckin2014\TeenProxy\obj\Debug\TeenProxy.csprojResolveAssemblyReference.cache
+G:\projects\WebSites\TeenCheckin2014\TeenProxy\obj\Debug\TeenProxy.dll
+G:\projects\WebSites\TeenCheckin2014\TeenProxy\obj\Debug\TeenProxy.pdb
+G:\projects\WebSites\TeenCheckin2014\TeenProxy\bin\Debug\TeenProxy.dll.config
+G:\projects\TeenRevival2015\TeenRevival\TeenProxy\bin\Debug\TeenProxy.dll.config
+G:\projects\TeenRevival2015\TeenRevival\TeenProxy\bin\Debug\TeenProxy.dll
+G:\projects\TeenRevival2015\TeenRevival\TeenProxy\bin\Debug\TeenProxy.pdb
+G:\projects\TeenRevival2015\TeenRevival\TeenProxy\obj\Debug\TeenProxy.dll
+G:\projects\TeenRevival2015\TeenRevival\TeenProxy\obj\Debug\TeenProxy.pdb

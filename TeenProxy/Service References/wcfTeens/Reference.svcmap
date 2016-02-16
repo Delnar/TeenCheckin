@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bd035086-4715-42ce-84ab-28aaab9d3e82" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8001/TeenService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="52247913-4dd2-41da-a18a-84b150ab2127" SourceId="1" SourceUrl="http://localhost:8001/TeenService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="0716f31f-83ad-4e23-965e-9fd0a9779c29" SourceId="1" SourceUrl="http://localhost:8001/TeenService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="b09ff3ea-03ef-46f9-90ef-ad27b13848bb" SourceId="1" SourceUrl="http://localhost:8001/TeenService/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="de155dd2-42c2-475e-a06a-ef3267da6d18" SourceId="1" SourceUrl="http://localhost:8001/TeenService/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="a725bbe4-dbd6-401e-8ef6-226ca525fa60" SourceId="1" SourceUrl="http://localhost:8001/TeenService/mex" />
+    <MetadataFile FileName="System.Collections.Generic.xsd" MetadataType="Schema" ID="f1a36823-51db-4e24-bc18-a5ffc2eabe49" SourceId="1" SourceUrl="http://localhost:8001/TeenService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

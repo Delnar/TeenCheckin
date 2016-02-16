@@ -1,0 +1,34 @@
+﻿body {
+}
+
+.phone {
+    display: inline;
+    float: left;
+    width: 50px;
+}
+
+.phone-end {
+    display: inline;
+    float: left;    
+    width: 75px;
+}
+
+.nophone {
+    margin-left: 5px;
+}
+
+.csz {
+    display: inline;
+    float: left;
+}
+
+.csz-city {
+    width: 100px;
+}
+.csz-state {
+    width: 70px;
+}
+.csz-zip {
+    width: 100px;
+}
+

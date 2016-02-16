@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TeenDataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Teen">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PhoneArea" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="PhonePrefix" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="PhonePostfix" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="Street1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Street2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="zip" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Bus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Grade" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GuestOf" Type="String" FixedLength="false" Unicode="false" DefaultValue="" MaxLength="Max" Nullable="true" />
+    <Property Name="GuestOfKey" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="TeenNights" Relationship="TeenDataModel.FK_TeenNights_Teens" FromRole="Teen" ToRole="TeenNight" />
+  </EntityType>
+  <EntityContainer Name="TeenDB" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Teens" EntityType="Self.Teen" />
+    <EntitySet Name="TeenNights" EntityType="TeenDataModel.TeenNight" />
+    <AssociationSet Name="FK_TeenNights_Teens" Association="TeenDataModel.FK_TeenNights_Teens">
+      <End Role="Teen" EntitySet="Teens" />
+      <End Role="TeenNight" EntitySet="TeenNights" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="TeenNight">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TeenId" Type="Int32" Nullable="false" />
+    <Property Name="AttendanceDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Decision" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Teen" Relationship="TeenDataModel.FK_TeenNights_Teens" FromRole="TeenNight" ToRole="Teen" />
+    <Property Name="Attended" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_TeenNights_Teens">
+    <End Type="TeenDataModel.Teen" Role="Teen" Multiplicity="1" />
+    <End Type="TeenDataModel.TeenNight" Role="TeenNight" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teen">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TeenNight">
+        <PropertyRef Name="TeenId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

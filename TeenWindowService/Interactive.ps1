@@ -1,0 +1,1 @@
+﻿.\TeenWindowService.exe -I

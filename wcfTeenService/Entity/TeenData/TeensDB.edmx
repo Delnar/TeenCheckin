@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TeenDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TeenNights">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TeenId" Type="int" Nullable="false" />
+          <Property Name="AttendanceDate" Type="datetime" Nullable="false" />
+          <Property Name="Decision" Type="varchar(max)" />
+          <Property Name="Attended" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Teens">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="varchar(max)" Nullable="false" />
+          <Property Name="LastName" Type="varchar(max)" Nullable="false" />
+          <Property Name="PhoneArea" Type="char" MaxLength="3" />
+          <Property Name="PhonePrefix" Type="char" MaxLength="3" />
+          <Property Name="PhonePostfix" Type="char" MaxLength="4" />
+          <Property Name="Street1" Type="varchar(max)" />
+          <Property Name="Street2" Type="varchar(max)" />
+          <Property Name="City" Type="varchar(max)" />
+          <Property Name="State" Type="varchar(max)" />
+          <Property Name="zip" Type="varchar(max)" />
+          <Property Name="Sex" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Bus" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Grade" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="GuestOf" Type="varchar(max)" />
+          <Property Name="GuestOfKey" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_TeenNights_Teens">
+          <End Role="Teens" Type="Self.Teens" Multiplicity="1" />
+          <End Role="TeenNights" Type="Self.TeenNights" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teens">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="TeenNights">
+              <PropertyRef Name="TeenId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TeenDataModelStoreContainer">
+          <EntitySet Name="TeenNights" EntityType="Self.TeenNights" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Teens" EntityType="Self.Teens" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_TeenNights_Teens" Association="Self.FK_TeenNights_Teens">
+            <End Role="Teens" EntitySet="Teens" />
+            <End Role="TeenNights" EntitySet="TeenNights" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TeenDataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Teen">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PhoneArea" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="PhonePrefix" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="PhonePostfix" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="Street1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Street2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="zip" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Sex" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Bus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Grade" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GuestOf" Type="String" FixedLength="false" Unicode="false" DefaultValue="" MaxLength="Max" Nullable="true" />
+          <Property Name="GuestOfKey" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="TeenNights" Relationship="TeenDataModel.FK_TeenNights_Teens" FromRole="Teen" ToRole="TeenNight" />
+        </EntityType>
+        <EntityContainer Name="TeenDB" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Teens" EntityType="Self.Teen" />
+          <EntitySet Name="TeenNights" EntityType="TeenDataModel.TeenNight" />
+          <AssociationSet Name="FK_TeenNights_Teens" Association="TeenDataModel.FK_TeenNights_Teens">
+            <End Role="Teen" EntitySet="Teens" />
+            <End Role="TeenNight" EntitySet="TeenNights" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="TeenNight">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TeenId" Type="Int32" Nullable="false" />
+          <Property Name="AttendanceDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Decision" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Teen" Relationship="TeenDataModel.FK_TeenNights_Teens" FromRole="TeenNight" ToRole="Teen" />
+          <Property Name="Attended" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_TeenNights_Teens">
+          <End Type="TeenDataModel.Teen" Role="Teen" Multiplicity="1" />
+          <End Type="TeenDataModel.TeenNight" Role="TeenNight" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teen">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="TeenNight">
+              <PropertyRef Name="TeenId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TeenDataModelStoreContainer" CdmEntityContainer="TeenDB">
+          <EntitySetMapping Name="Teens">
+            <EntityTypeMapping TypeName="TeenDataModel.Teen">
+              <MappingFragment StoreEntitySet="Teens">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="PhoneArea" ColumnName="PhoneArea" />
+                <ScalarProperty Name="PhonePrefix" ColumnName="PhonePrefix" />
+                <ScalarProperty Name="PhonePostfix" ColumnName="PhonePostfix" />
+                <ScalarProperty Name="Street1" ColumnName="Street1" />
+                <ScalarProperty Name="Street2" ColumnName="Street2" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="zip" ColumnName="zip" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Bus" ColumnName="Bus" />
+                <ScalarProperty Name="Grade" ColumnName="Grade" />
+                <ScalarProperty Name="GuestOf" ColumnName="GuestOf" />
+                <ScalarProperty Name="GuestOfKey" ColumnName="GuestOfKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TeenNights">
+            <EntityTypeMapping TypeName="TeenDataModel.TeenNight">
+              <MappingFragment StoreEntitySet="TeenNights">
+                <ScalarProperty Name="Attended" ColumnName="Attended" />
+                <ScalarProperty Name="Decision" ColumnName="Decision" />
+                <ScalarProperty Name="AttendanceDate" ColumnName="AttendanceDate" />
+                <ScalarProperty Name="TeenId" ColumnName="TeenId" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

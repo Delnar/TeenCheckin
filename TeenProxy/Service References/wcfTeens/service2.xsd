@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="Teen">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneArea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhonePrefix" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhonePostfix" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sex" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Bus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Grade" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GuestOf" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GuestOfKey" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="LstAttended" nillable="true" type="q1:ArrayOfboolean" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="LstDecision" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element minOccurs="0" name="GuestOfTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Teen" nillable="true" type="Teen" />
+  <xs:complexType name="TeenReport">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstNightTotals" nillable="true" type="q3:ArrayOfint" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstGuestTotals" nillable="true" type="q4:ArrayOfint" />
+      <xs:element minOccurs="0" name="TeenTotal" type="xs:int" />
+      <xs:element minOccurs="0" name="GuestTotal" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TeenReport" nillable="true" type="TeenReport" />
+  <xs:complexType name="ArrayOfTeen">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Teen" nillable="true" type="Teen" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTeen" nillable="true" type="ArrayOfTeen" />
+  <xs:complexType name="ArrayOfTeenRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TeenRecord" nillable="true" type="TeenRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTeenRecord" nillable="true" type="ArrayOfTeenRecord" />
+  <xs:complexType name="TeenRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PublicRecId" type="xs:int" />
+      <xs:element minOccurs="0" name="PrivateRecId" type="xs:int" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneArea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhonePrefix" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneSuffix" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sex" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Bus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Grade" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GuestOf" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CheckIn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dirty" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GuestOfKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NewRec" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdateCheckin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdateRec" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TeenRecord" nillable="true" type="TeenRecord" />
+</xs:schema>

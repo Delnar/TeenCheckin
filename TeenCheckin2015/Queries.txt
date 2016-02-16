@@ -1,0 +1,84 @@
+﻿DROP TABLE IF EXISTS `teencheckin`.`teendata`;
+CREATE TABLE  `teencheckin`.`teendata` (
+  `idx` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(30) DEFAULT NULL,
+  `lastname` varchar(30) DEFAULT NULL,
+  `phone` varchar(10) DEFAULT NULL,
+  `guestof` int(10) signed DEFAULT NULL,
+  `sex` char(1) DEFAULT NULL,
+  `grade` varchar(3) DEFAULT NULL,
+  `address1` varchar(45) DEFAULT NULL,
+  `address2` varchar(45) DEFAULT NULL,
+  `city` varchar(45) DEFAULT NULL,
+  `state` varchar(2) DEFAULT NULL,
+  `zip` varchar(5) DEFAULT NULL,
+  `guestofkey` varchar(70) DEFAULT NULL,
+  `monday` char(1) DEFAULT NULL,
+  `tuesday` char(1) DEFAULT NULL,
+  `wednessday` char(1) DEFAULT NULL,
+  `thursday` char(1) DEFAULT NULL,
+  `descMon` varchar(45) DEFAULT NULL,
+  `descTues` varchar(45) DEFAULT NULL,
+  `descWed` varchar(45) DEFAULT NULL,
+  `descThurs` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`idx`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+
+ALTER TABLE teendata AUTO_INCREMENT = 300;
+
+
+INSERT INTO teendata (firstname, lastname, phone, guestof, sex, grade, address1, address2, city, state, zip, monday, tuesday, wednessday, thursday)
+VALUES (@pFirstName, @pLastName, @pPhone, @pGuestOf, @pSex, @pGrade, @pAddress1, @pAddress2, @pCity, @pState, @pZip, @pMonday, @pTuesday, @pWednessday, @pThursday);
+
+
+
+            cmd.Parameters.Add(new MySqlParameter("pFirstName", MySqlDbType.VarChar)).Value = txtFirstName.Text;
+            cmd.Parameters.Add(new MySqlParameter("pLastName", MySqlDbType.VarChar)).Value = txtLastName.Text;
+            cmd.Parameters.Add(new MySqlParameter("pPhone", MySqlDbType.VarChar)).Value = txtAreaCode.Text + txtPhone3.Text + txtPhone4.Text;
+            cmd.Parameters.Add(new MySqlParameter("pGuestOf", MySqlDbType.Int32)).Value = cmbGuestOf.SelectedValue;
+            cmd.Parameters.Add(new MySqlParameter("pSex", MySqlDbType.VarChar)).Value = cmbSex.SelectedValue;
+            cmd.Parameters.Add(new MySqlParameter("pGrade", MySqlDbType.VarChar)).Value = cmbGrade.SelectedValue;
+            cmd.Parameters.Add(new MySqlParameter("pAddress1", MySqlDbType.VarChar)).Value = txtAddress1.Text;
+            cmd.Parameters.Add(new MySqlParameter("pAddress2", MySqlDbType.VarChar)).Value = txtAddress2.Text;
+            cmd.Parameters.Add(new MySqlParameter("pCity", MySqlDbType.VarChar)).Value = txtCity.Text;
+            cmd.Parameters.Add(new MySqlParameter("pState", MySqlDbType.VarChar)).Value = txtState.Text;
+            cmd.Parameters.Add(new MySqlParameter("pZip", MySqlDbType.VarChar)).Value = txtZip.Text;
+
+
+
+
+CREATE TABLE  `teencheckin`.`teennights` (
+`night` VARCHAR( 10 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+`year` INT NOT NULL ,
+`attended` VARCHAR( 1 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT  'N',
+`idx` INT NOT NULL ,
+`unique_key` VARCHAR( 36 ) CHARACTER SET latin1 COLLATE latin1_spanish_ci NOT NULL ,
+PRIMARY KEY (  `unique_key` )
+) ENGINE = MYISAM
+
+CREATE TABLE  `teencheckin`.`defaults` (
+`name` VARCHAR( 32 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+`value` VARCHAR( 32 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+`unique_key` VARCHAR( 32 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+PRIMARY KEY (  `unique_key` )
+) ENGINE = MYISAM
+
+INSERT INTO  `teencheckin`.`teennights` (
+`night` ,
+`year` ,
+`attended` ,
+`idx` ,
+`unique_key`
+)
+VALUES (
+'Monday',  '2010',  'N',  '1',  'MYKEY'
+);
+
+ALTER TABLE `teendata`
+  DROP `monday`,
+  DROP `tuesday`,
+  DROP `wednessday`,
+  DROP `thursday`;
+  
+  ALTER TABLE  `teennights` ADD  `desc` VARCHAR( 45 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL AFTER  `attended` ;

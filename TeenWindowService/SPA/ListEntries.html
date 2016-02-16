@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Content/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/ListEntries.css" rel="stylesheet">
+
+    <title>Form Entry Page</title>
+
+    <script src="Scripts/jquery-2.1.1.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="js/DataManager.js"></script>
+    <script src="js/Screen.js"></script>
+    <script src="js/ListEntries.js"></script>
+    <script src="js/App.js"></script>
+
+</head>
+<body>
+    <div id="ListEntries" class="ListEntries list-group">     
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <span class="navbar-brand">
+                        <span id="FilterAll" class="btn" data-checkinfilter='N'>&nbsp;</span>
+                        <span id="Filter01" class="BusFilter btn" data-bus01='N'>&nbsp;</span>
+                        <span id="Filter02" class="BusFilter btn" data-bus02='N'>&nbsp;</span>
+                        <span id="Filter03" class="BusFilter btn" data-bus03='N'>&nbsp;</span>
+                        <span id="Filter04" class="BusFilter btn" data-car01='N'>&nbsp;</span>
+                        <span id="SyncObject" class="sync">&nbsp;</span>
+                        <span id="FilterCount"></span>                        
+                    </span>                 
+                </div>
+                <div class="navbar-form navbar-right" role="form">
+                    <div class="input-group">
+                        <span class="input-group-addon">Filter By Name</span>
+                        <input type="text" class="form-control" id="Filter" />
+                    </div>
+                    <button id="newbut" type="submit" class="btn btn-success">New</button>
+                </div>
+            </div>
+        </div>
+        <div id="ListItems">
+        </div>
+    </div>
+</body>
+</html>

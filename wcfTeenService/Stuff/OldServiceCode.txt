@@ -1,0 +1,5 @@
+﻿      <service behaviorConfiguration="MyServiceTypeBehaviorsSOAP" name="wcfTeenServiceX.wcf.TeenServiceX">
+        <endpoint address="" binding="wsHttpBinding" name="ws" contract="wcfTeenServiceX.wcf.ITeenServiceX" bindingConfiguration="wsHttpBinding_IService_NoSec" />
+        <endpoint address="mex" binding="mexHttpBinding" name="mex" contract="IMetadataExchange" />
+        <endpoint address="json" behaviorConfiguration="jsonBehavior" binding="webHttpBinding" bindingConfiguration="" name="restJSON" contract="wcfTeenServiceX.wcf.ITeenServiceX" kind="" endpointConfiguration="" />
+      </service>

@@ -1,0 +1,13 @@
+C:\Users\Joshua\Documents\Visual Studio 2008\Projects\TeenCheckin\TeenCheckin\TeenCheckin\bin\Release\TeenCheckin.exe.manifest
+C:\Users\Joshua\Documents\Visual Studio 2008\Projects\TeenCheckin\TeenCheckin\TeenCheckin\bin\Release\TeenCheckin.application
+C:\Users\Joshua\Documents\Visual Studio 2008\Projects\TeenCheckin\TeenCheckin\TeenCheckin\bin\Release\TeenCheckin.exe
+C:\Users\Joshua\Documents\Visual Studio 2008\Projects\TeenCheckin\TeenCheckin\TeenCheckin\bin\Release\TeenCheckin.pdb
+C:\Users\Joshua\Documents\Visual Studio 2008\Projects\TeenCheckin\TeenCheckin\TeenCheckin\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Joshua\Documents\Visual Studio 2008\Projects\TeenCheckin\TeenCheckin\TeenCheckin\obj\Release\TeenCheckin.Properties.Resources.resources
+C:\Users\Joshua\Documents\Visual Studio 2008\Projects\TeenCheckin\TeenCheckin\TeenCheckin\obj\Release\TeenCheckin.csproj.GenerateResource.Cache
+C:\Users\Joshua\Documents\Visual Studio 2008\Projects\TeenCheckin\TeenCheckin\TeenCheckin\obj\Release\TeenCheckin.exe.manifest
+C:\Users\Joshua\Documents\Visual Studio 2008\Projects\TeenCheckin\TeenCheckin\TeenCheckin\obj\Release\TeenCheckin.application
+C:\Users\Joshua\Documents\Visual Studio 2008\Projects\TeenCheckin\TeenCheckin\TeenCheckin\obj\Release\TeenCheckin.exe
+C:\Users\Joshua\Documents\Visual Studio 2008\Projects\TeenCheckin\TeenCheckin\TeenCheckin\obj\Release\TeenCheckin.pdb
+C:\Users\Joshua\Documents\Visual Studio 2008\Projects\TeenCheckin\TeenCheckin\TeenCheckin\obj\Release\TeenCheckin.frmMain.resources
+C:\Users\Joshua\Documents\Visual Studio 2008\Projects\TeenCheckin\TeenCheckin\TeenCheckin\obj\Release\TeenCheckin.frmTeenList.resources

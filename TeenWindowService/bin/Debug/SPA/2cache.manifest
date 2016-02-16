@@ -1,0 +1,25 @@
+﻿CACHE MANIFEST
+
+CACHE:
+Content/bootstrap.min.css
+Scripts/jquery-2.1.1.js
+Scripts/bootstrap.min.js
+css/ListEntries.css
+css/style.css
+css/EntryForm.css
+js/chance.js
+js/DataManager.js
+js/Screen.js
+js/RandomData.js
+js/EntryForm.js
+js/App.js
+js/ServerComm.js
+js/ListEntries.js
+default.html
+
+NETWORK:
+*
+
+FALLBACK:
+ 
+    

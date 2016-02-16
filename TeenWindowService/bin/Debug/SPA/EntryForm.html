@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Content/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/EntryForm.css" rel="stylesheet">
+
+    <title>Form Entry Page</title>
+
+    <script src="Scripts/jquery-2.1.1.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="js/DataManager.js"></script>
+    <script src="js/Screen.js"></script>
+    <script src="js/EntryForm.js"></script>
+    <script src="js/App.js"></script>
+
+</head>
+<body>
+    <div id="EntryForm">
+        <form class="form-horizontal">
+            <fieldset>
+                <!-- Form Name -->
+                <legend>Teen Information</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="ef_firstName">First Name</label>
+                    <div class="col-md-4">
+                        <input id="ef_firstName" name="firstName" type="text" placeholder=">John<" class="form-control input-md" required="">
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="ef_lastName">Last Name</label>
+                    <div class="col-md-4">
+                        <input id="ef_lastName" name="LastName" type="text" placeholder=">Smith<" class="form-control input-md" required="">
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="phone">Phone Number</label>
+                    <div class="col-md-4" id="phone">
+                        <input id="ef_phoneArea" name="AreaCode" type="text" placeholder="###" class="form-control input-md phone" required="">
+                        <input id="ef_phonePrefix" name="Prefix" type="text" placeholder="###" class="form-control input-md  phone" required="">
+                        <input id="ef_phoneSuffix" name="Suffix" type="text" placeholder="####" class="form-control input-md phone-end" required="">
+                        <a id="ef_NoPhone" name="NoPhone" class="btn btn-primary nophone">No Phone #</a>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="ef_street1">Street</label>
+                    <div class="col-md-6">
+                        <input id="ef_street1" name="street1" type="text" placeholder=">1122 Some Avenue<" class="form-control input-md" required="">
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="ef_street2">Street</label>
+                    <div class="col-md-6">
+                        <input id="ef_street2" name="Street2" type="text" placeholder="" class="form-control input-md">
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="csz">City, State Zip</label>
+                    <div class="col-md-8" id="csz">
+                        <input id="ef_city" name="City" type="text" placeholder=">Redding<" class="form-control input-md csz csz-city" required="">
+                        <input id="ef_state" name="State" type="text" placeholder=">CA<" class="form-control input-md csz csz-state" required="">
+                        <input id="ef_zip" name="Zip" type="text" placeholder=">96001<" class="form-control input-md csz csz-zip" required="">
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <a id="ef_zip1" name="zip1" class="btn btn-primary">96001</a>
+                        <a id="ef_zip2" name="zip2" class="btn btn-primary">96002</a>
+                        <a id="ef_zip3" name="zip3" class="btn btn-primary">96003</a>
+                        <a id="ef_zip7" name="zip7" class="btn btn-primary">96007</a>
+                        <a id="ef_noAddress" name="NoAddress" class="btn btn-info">No Address</a>
+                    </div>
+                </div>
+
+                <!-- Select Basic -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="ef_sex">Sex</label>
+                    <div class="col-md-4">
+                        <select id="ef_sex" name="Sex" class="form-control">
+                            <option value="M">Male</option>
+                            <option value="F">Female</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Multiple Radios (inline) -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="Bus">Bus</label>
+                    <div class="col-md-4">
+                        <label class="radio-inline" for="bus-0">
+                            <input type="radio" name="Bus" id="ef_bus-0" value="1" checked="checked" />
+                            1
+                        </label>
+                        <label class="radio-inline" for="bus-1">
+                            <input type="radio" name="Bus" id="ef_bus-1" value="2" />
+                            2
+                        </label>
+                        <label class="radio-inline" for="bus-2">
+                            <input type="radio" name="Bus" id="ef_bus-2" value="3" />
+                            3
+                        </label>
+                        <label class="radio-inline" for="bus-3">
+                            <input type="radio" name="Bus" id="ef_bus-3" value="D" />
+                            Drive In
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Select Basic -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="ef_grade">Grade</label>
+                    <div class="col-md-4">
+                        <select id="ef_grade" name="Grade" class="form-control">
+                            <option value="6">6th</option>
+                            <option value="7">7th</option>
+                            <option value="8">8th</option>
+                            <option value="9">9th</option>
+                            <option value="10">10th</option>
+                            <option value="11">11th</option>
+                            <option value="12">12th</option>
+                            <option value="-1">Unknown</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Select Basic -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="ef_guest">Guest Of</label>
+                    <div class="col-md-4">
+                        <select id="ef_guest" name="Guest" class="form-control"></select>
+                    </div>
+                </div>
+
+                <div id="Messages">
+
+                </div>
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="NoAddress"></label>
+                    <div class="col-md-4">
+                        <a id="ef_save" name="Save" class="btn btn-success">Save</a>
+                        <a id="ef_cancel" name="Cancel" class="btn btn-danger">Cancel</a>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

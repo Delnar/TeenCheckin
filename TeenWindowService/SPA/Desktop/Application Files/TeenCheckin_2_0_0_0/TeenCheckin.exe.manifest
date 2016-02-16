@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="TeenCheckin.exe" version="2.0.0.0" publicKeyToken="1758c93a1ff41820" language="neutral" processorArchitecture="x86" type="win32" />
+  <description asmv2:iconFile="Command.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="TeenCheckin" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="TeenCheckin.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="2.0.50727.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Core" version="3.5.0.0" publicKeyToken="b77a5c561934e089" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="WindowsBase" version="3.0.0.0" publicKeyToken="31bf3856ad364e35" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TeenCheckin.exe" size="784896">
+      <assemblyIdentity name="TeenCheckin" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>yDChgM7TgKoPFXGxqtOLMa5LFgo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TeenProxy.dll" size="19456">
+      <assemblyIdentity name="TeenProxy" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>S+8sj9MLPFG2Pt6UNo1DbdUZSeI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Command.ico" size="356750">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>z/XnzBQnPM3cnG+kS4ir/X3kGG8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ico\Command.ico" size="356750">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>z/XnzBQnPM3cnG+kS4ir/X3kGG8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="TeenCheckin.exe.config" size="117">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>a3Forh+i+nzyaONrpGeK7Sudu10=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP\Joshua" issuerKeyHash="59f22d3576e97056e44661840c4d3581aced0a23" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>3+lkFhjU1O85xyD4DQdGsXxFiOo=</DigestValue></Reference></SignedInfo><SignatureValue>DFoCMfNYgJAejje/fwtRtLyDlXkajMeyzwP/k7eenJt4ayVUF/NxlQ2ZpWDUGNbTPX2lLTQOIluV1o3nRAxprSOy9hyTTfrggtSQFZk3XfT+Posrg4UisAa8LXnI3QbyJ/jqqHZmFJVd7fiFwBHJFoXvqAKwdu7z+gkCVMSkCFU=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>tUbzzFRdoFhlZaenxVonDIPiyAQw0/wsiI2oC7cbXhbEdiyBzX25RfXScjJA3xTmOznF7znkywUfH8zs0k0UdmCt3LxEWY+LCyr/Tuucq8VCHjUUNEEhypjkmrc1IEfWiijdSIRVCOi5SIbkSj3XuVJA9xZ2dPe5QYeqcOjc8LE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="ea88457cb146070df820c739efd4d4181664e9df" Description="" Url=""><as:assemblyIdentity name="TeenCheckin.exe" version="2.0.0.0" publicKeyToken="1758c93a1ff41820" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP\Joshua</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>hEwC0Efa9PKfFtL67tk9+bGyY5U=</DigestValue></Reference></SignedInfo><SignatureValue>rWizsnfuYjhda6vhil92XF2lj/7CHcBQClIb0TYpzJJQ8eEDPg8NFoYfwIR3Qd+2pOAcEVVVxUvwN2Fj/noULQt8s6tUt3clzTH4sOokpqygcVMflsiTS+rWYSD9YPY0kDkP1qH9aNEHnqeMqp8uPtr0hqC7dmKDEgvSGzCSA0A=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>tUbzzFRdoFhlZaenxVonDIPiyAQw0/wsiI2oC7cbXhbEdiyBzX25RfXScjJA3xTmOznF7znkywUfH8zs0k0UdmCt3LxEWY+LCyr/Tuucq8VCHjUUNEEhypjkmrc1IEfWiijdSIRVCOi5SIbkSj3XuVJA9xZ2dPe5QYeqcOjc8LE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB0TCCATqgAwIBAgIQFBk5eR5TnqNK1kNuL97G2TANBgkqhkiG9w0BAQUFADAnMSUwIwYDVQQDHhwARABFAFMASwBUAE8AUABcAEoAbwBzAGgAdQBhMB4XDTE0MTEwNTA2NDQyNVoXDTE1MTEwNTEyNDQyNVowJzElMCMGA1UEAx4cAEQARQBTAEsAVABPAFAAXABKAG8AcwBoAHUAYTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAtUbzzFRdoFhlZaenxVonDIPiyAQw0/wsiI2oC7cbXhbEdiyBzX25RfXScjJA3xTmOznF7znkywUfH8zs0k0UdmCt3LxEWY+LCyr/Tuucq8VCHjUUNEEhypjkmrc1IEfWiijdSIRVCOi5SIbkSj3XuVJA9xZ2dPe5QYeqcOjc8LECAwEAATANBgkqhkiG9w0BAQUFAAOBgQCOHpjWGFOnbji8ivxl0t6X+fn0xiOeMVJ8YUwJNJ5j18gNgy7+VIp/re2OfTl7/BctgTbiJ/3C8LT9hNmPT4saxyFoRn1MmgsMZc4dINvWfmfEjK1TAXNydQB8UmxFgqiD5dEIncs6xfj2wyjZX2YR3obR/MwgXwCw5oMqPiE6xw==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

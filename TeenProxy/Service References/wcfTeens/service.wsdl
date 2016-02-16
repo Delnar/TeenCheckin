@@ -1,0 +1,584 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TeenService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="ws_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITeenService_HelloWorld_InputMessage">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_HelloWorld_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_LoadTeen_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadTeen" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_LoadTeen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadTeenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetDistinctLastName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDistinctLastName" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetDistinctLastName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDistinctLastNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetDistinctFirstName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDistinctFirstName" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetDistinctFirstName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDistinctFirstNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetDistinctZip_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDistinctZip" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetDistinctZip_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDistinctZipResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetDistinctCity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDistinctCity" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetDistinctCity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDistinctCityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_DeleteTeen_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTeen" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_DeleteTeen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTeenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetNextTeen_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNextTeen" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetNextTeen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNextTeenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetPrevTeen_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrevTeen" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetPrevTeen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrevTeenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetFirstTeen_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFirstTeen" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetFirstTeen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFirstTeenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetLastTeen_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastTeen" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetLastTeen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastTeenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetRecordsToId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecordsToId" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetRecordsToId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecordsToIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_TotalTeenCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:TotalTeenCount" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_TotalTeenCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TotalTeenCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetTeenReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTeenReport" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetTeenReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTeenReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_ListGuestsBrought_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListGuestsBrought" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_ListGuestsBrought_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListGuestsBroughtResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_ListTop5GuestBringers_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListTop5GuestBringers" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_ListTop5GuestBringers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListTop5GuestBringersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_RealAllTeens_InputMessage">
+    <wsdl:part name="parameters" element="tns:RealAllTeens" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_RealAllTeens_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RealAllTeensResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_SaveTeenRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTeenRecord" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_SaveTeenRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTeenRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_UpdateTeenRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTeenRecord" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_UpdateTeenRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTeenRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetDecisionList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDecisionList" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetDecisionList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDecisionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetTeenByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTeenByName" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetTeenByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTeenByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetTeenByGuestOfKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTeenByGuestOfKey" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetTeenByGuestOfKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTeenByGuestOfKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_ServerStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:ServerStatus" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_ServerStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ServerStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_ServerStatusOptions_InputMessage">
+    <wsdl:part name="parameters" element="tns:ServerStatusOptions" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_ServerStatusOptions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ServerStatusOptionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_ProcessRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessRecords" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_ProcessRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_ProcessRecordsOptions_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessRecordsOptions" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_ProcessRecordsOptions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessRecordsOptionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecords" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetRecordsOptions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecordsOptions" />
+  </wsdl:message>
+  <wsdl:message name="ITeenService_GetRecordsOptions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecordsOptionsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITeenService">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/HelloWorld" message="tns:ITeenService_HelloWorld_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/HelloWorldResponse" message="tns:ITeenService_HelloWorld_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadTeen">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/LoadTeen" message="tns:ITeenService_LoadTeen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/LoadTeenResponse" message="tns:ITeenService_LoadTeen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDistinctLastName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/GetDistinctLastName" message="tns:ITeenService_GetDistinctLastName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/GetDistinctLastNameResponse" message="tns:ITeenService_GetDistinctLastName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDistinctFirstName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/GetDistinctFirstName" message="tns:ITeenService_GetDistinctFirstName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/GetDistinctFirstNameResponse" message="tns:ITeenService_GetDistinctFirstName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDistinctZip">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/GetDistinctZip" message="tns:ITeenService_GetDistinctZip_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/GetDistinctZipResponse" message="tns:ITeenService_GetDistinctZip_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDistinctCity">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/GetDistinctCity" message="tns:ITeenService_GetDistinctCity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/GetDistinctCityResponse" message="tns:ITeenService_GetDistinctCity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTeen">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/DeleteTeen" message="tns:ITeenService_DeleteTeen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/DeleteTeenResponse" message="tns:ITeenService_DeleteTeen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNextTeen">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/GetNextTeen" message="tns:ITeenService_GetNextTeen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/GetNextTeenResponse" message="tns:ITeenService_GetNextTeen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrevTeen">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/GetPrevTeen" message="tns:ITeenService_GetPrevTeen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/GetPrevTeenResponse" message="tns:ITeenService_GetPrevTeen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFirstTeen">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/GetFirstTeen" message="tns:ITeenService_GetFirstTeen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/GetFirstTeenResponse" message="tns:ITeenService_GetFirstTeen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastTeen">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/GetLastTeen" message="tns:ITeenService_GetLastTeen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/GetLastTeenResponse" message="tns:ITeenService_GetLastTeen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecordsToId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/GetRecordsToId" message="tns:ITeenService_GetRecordsToId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/GetRecordsToIdResponse" message="tns:ITeenService_GetRecordsToId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TotalTeenCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/TotalTeenCount" message="tns:ITeenService_TotalTeenCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/TotalTeenCountResponse" message="tns:ITeenService_TotalTeenCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTeenReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/GetTeenReport" message="tns:ITeenService_GetTeenReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/GetTeenReportResponse" message="tns:ITeenService_GetTeenReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListGuestsBrought">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/ListGuestsBrought" message="tns:ITeenService_ListGuestsBrought_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/ListGuestsBroughtResponse" message="tns:ITeenService_ListGuestsBrought_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListTop5GuestBringers">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/ListTop5GuestBringers" message="tns:ITeenService_ListTop5GuestBringers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/ListTop5GuestBringersResponse" message="tns:ITeenService_ListTop5GuestBringers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RealAllTeens">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/RealAllTeens" message="tns:ITeenService_RealAllTeens_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/RealAllTeensResponse" message="tns:ITeenService_RealAllTeens_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTeenRecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/SaveTeenRecord" message="tns:ITeenService_SaveTeenRecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/SaveTeenRecordResponse" message="tns:ITeenService_SaveTeenRecord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTeenRecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/UpdateTeenRecord" message="tns:ITeenService_UpdateTeenRecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/UpdateTeenRecordResponse" message="tns:ITeenService_UpdateTeenRecord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDecisionList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/GetDecisionList" message="tns:ITeenService_GetDecisionList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/GetDecisionListResponse" message="tns:ITeenService_GetDecisionList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTeenByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/GetTeenByName" message="tns:ITeenService_GetTeenByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/GetTeenByNameResponse" message="tns:ITeenService_GetTeenByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTeenByGuestOfKey">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/GetTeenByGuestOfKey" message="tns:ITeenService_GetTeenByGuestOfKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/GetTeenByGuestOfKeyResponse" message="tns:ITeenService_GetTeenByGuestOfKey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/DoWork" message="tns:ITeenService_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/DoWorkResponse" message="tns:ITeenService_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ServerStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/ServerStatus" message="tns:ITeenService_ServerStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/ServerStatusResponse" message="tns:ITeenService_ServerStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ServerStatusOptions">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/ServerStatusOptions" message="tns:ITeenService_ServerStatusOptions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/ServerStatusOptionsResponse" message="tns:ITeenService_ServerStatusOptions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessRecords">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/ProcessRecords" message="tns:ITeenService_ProcessRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/ProcessRecordsResponse" message="tns:ITeenService_ProcessRecords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessRecordsOptions">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/ProcessRecordsOptions" message="tns:ITeenService_ProcessRecordsOptions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/ProcessRecordsOptionsResponse" message="tns:ITeenService_ProcessRecordsOptions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecords">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/GetRecords" message="tns:ITeenService_GetRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/GetRecordsResponse" message="tns:ITeenService_GetRecords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecordsOptions">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeenService/GetRecordsOptions" message="tns:ITeenService_GetRecordsOptions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeenService/GetRecordsOptionsResponse" message="tns:ITeenService_GetRecordsOptions_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ws" type="tns:ITeenService">
+    <wsp:PolicyReference URI="#ws_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTeen">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/LoadTeen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDistinctLastName">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/GetDistinctLastName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDistinctFirstName">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/GetDistinctFirstName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDistinctZip">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/GetDistinctZip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDistinctCity">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/GetDistinctCity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTeen">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/DeleteTeen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNextTeen">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/GetNextTeen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrevTeen">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/GetPrevTeen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFirstTeen">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/GetFirstTeen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastTeen">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/GetLastTeen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecordsToId">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/GetRecordsToId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TotalTeenCount">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/TotalTeenCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTeenReport">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/GetTeenReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListGuestsBrought">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/ListGuestsBrought" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListTop5GuestBringers">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/ListTop5GuestBringers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RealAllTeens">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/RealAllTeens" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTeenRecord">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/SaveTeenRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTeenRecord">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/UpdateTeenRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDecisionList">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/GetDecisionList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTeenByName">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/GetTeenByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTeenByGuestOfKey">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/GetTeenByGuestOfKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoWork">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/DoWork" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServerStatus">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/ServerStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServerStatusOptions">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/ServerStatusOptions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessRecords">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/ProcessRecords" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessRecordsOptions">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/ProcessRecordsOptions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecords">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/GetRecords" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecordsOptions">
+      <soap12:operation soapAction="http://tempuri.org/ITeenService/GetRecordsOptions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TeenService">
+    <wsdl:port name="ws" binding="tns:ws">
+      <soap12:address location="http://localhost:8001/TeenService/" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:8001/TeenService/</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

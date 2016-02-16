@@ -1,0 +1,16 @@
+G:\projects\TeenRevival2015\TeenRevival\TeenCheckin2015\obj\Debug\TeenCheckin2015.csprojResolveAssemblyReference.cache
+G:\projects\TeenRevival2015\TeenRevival\TeenCheckin2015\obj\Debug\TeenCheckin.frmException.resources
+G:\projects\TeenRevival2015\TeenRevival\TeenCheckin2015\obj\Debug\TeenCheckin.frmMain.resources
+G:\projects\TeenRevival2015\TeenRevival\TeenCheckin2015\obj\Debug\TeenCheckin.frmSelectTeens.resources
+G:\projects\TeenRevival2015\TeenRevival\TeenCheckin2015\obj\Debug\TeenCheckin.frmTeenList.resources
+G:\projects\TeenRevival2015\TeenRevival\TeenCheckin2015\obj\Debug\TeenCheckin.Properties.Resources.resources
+G:\projects\TeenRevival2015\TeenRevival\TeenCheckin2015\obj\Debug\TeenCheckin2015.csproj.GenerateResource.Cache
+G:\projects\TeenRevival2015\TeenRevival\TeenCheckin2015\bin\Debug\TeenCheckin.exe.config
+G:\projects\TeenRevival2015\TeenRevival\TeenCheckin2015\bin\Debug\TeenCheckin.exe
+G:\projects\TeenRevival2015\TeenRevival\TeenCheckin2015\bin\Debug\TeenCheckin.pdb
+G:\projects\TeenRevival2015\TeenRevival\TeenCheckin2015\bin\Debug\System.Net.Http.dll
+G:\projects\TeenRevival2015\TeenRevival\TeenCheckin2015\bin\Debug\TeenProxy.dll
+G:\projects\TeenRevival2015\TeenRevival\TeenCheckin2015\bin\Debug\TeenProxy.pdb
+G:\projects\TeenRevival2015\TeenRevival\TeenCheckin2015\bin\Debug\System.Net.Http.xml
+G:\projects\TeenRevival2015\TeenRevival\TeenCheckin2015\obj\Debug\TeenCheckin.exe
+G:\projects\TeenRevival2015\TeenRevival\TeenCheckin2015\obj\Debug\TeenCheckin.pdb

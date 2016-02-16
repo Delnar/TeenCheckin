@@ -1,0 +1,103 @@
+﻿Installing assembly 'C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.InstallLog
+   assemblypath = C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.exe
+No public installers with the RunInstallerAttribute.Yes attribute could be found in the C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.exe assembly.
+Committing assembly 'C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.InstallLog
+   assemblypath = C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.exe
+No public installers with the RunInstallerAttribute.Yes attribute could be found in the C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.exe assembly.
+Remove InstallState file because there are no installers.
+Installing assembly 'C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.InstallLog
+   assemblypath = C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.exe
+Committing assembly 'C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.InstallLog
+   assemblypath = C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.exe
+Uninstalling assembly 'C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.InstallLog
+   assemblypath = C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.exe
+Installing assembly 'C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.InstallLog
+   assemblypath = C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.exe
+Committing assembly 'C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.InstallLog
+   assemblypath = C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.exe
+Uninstalling assembly 'C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.InstallLog
+   assemblypath = C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.exe
+Installing assembly 'C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.InstallLog
+   assemblypath = C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.exe
+Installing service TeenWindowService...
+Service TeenWindowService has been successfully installed.
+Creating EventLog source TeenWindowService in log Application...
+Committing assembly 'C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.InstallLog
+   assemblypath = C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.exe
+Installing assembly 'C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.InstallLog
+   assemblypath = C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.exe
+Installing service TeenWindowService...
+Creating EventLog source TeenWindowService in log Application...
+Rolling back assembly 'C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.InstallLog
+   assemblypath = C:\projects\TeenRevival2015\TeenRevival\TeenCheckin2014\TeenWindowService\bin\debug\TeenWindowService.exe
+Restoring event log to previous state for source TeenWindowService.
+Installing assembly 'G:\projects\TeenRevival2015\TeenRevival\TeenWindowService\Bin\debug\TeenWindowService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = G:\projects\TeenRevival2015\TeenRevival\TeenWindowService\Bin\debug\TeenWindowService.InstallLog
+   assemblypath = G:\projects\TeenRevival2015\TeenRevival\TeenWindowService\Bin\debug\TeenWindowService.exe
+Installing service TeenWindowService...
+Service TeenWindowService has been successfully installed.
+Creating EventLog source TeenWindowService in log Application...
+Committing assembly 'G:\projects\TeenRevival2015\TeenRevival\TeenWindowService\Bin\debug\TeenWindowService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = G:\projects\TeenRevival2015\TeenRevival\TeenWindowService\Bin\debug\TeenWindowService.InstallLog
+   assemblypath = G:\projects\TeenRevival2015\TeenRevival\TeenWindowService\Bin\debug\TeenWindowService.exe
+Uninstalling assembly 'G:\projects\TeenRevival2015\TeenRevival\TeenWindowService\Bin\debug\TeenWindowService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = G:\projects\TeenRevival2015\TeenRevival\TeenWindowService\Bin\debug\TeenWindowService.InstallLog
+   assemblypath = G:\projects\TeenRevival2015\TeenRevival\TeenWindowService\Bin\debug\TeenWindowService.exe
+Removing EventLog source TeenWindowService.
+Service TeenWindowService is being removed from the system...
+Service TeenWindowService was successfully removed from the system.
+Installing assembly 'G:\projects\TeenRevival2015\TeenRevival\TeenWindowService\Bin\debug\TeenWindowService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = G:\projects\TeenRevival2015\TeenRevival\TeenWindowService\Bin\debug\TeenWindowService.InstallLog
+   assemblypath = G:\projects\TeenRevival2015\TeenRevival\TeenWindowService\Bin\debug\TeenWindowService.exe
+Installing service TeenWindowService...
+Service TeenWindowService has been successfully installed.
+Creating EventLog source TeenWindowService in log Application...
+Committing assembly 'G:\projects\TeenRevival2015\TeenRevival\TeenWindowService\Bin\debug\TeenWindowService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = G:\projects\TeenRevival2015\TeenRevival\TeenWindowService\Bin\debug\TeenWindowService.InstallLog
+   assemblypath = G:\projects\TeenRevival2015\TeenRevival\TeenWindowService\Bin\debug\TeenWindowService.exe

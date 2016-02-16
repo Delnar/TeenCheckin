@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TeenDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TeenNights">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TeenId" Type="int" Nullable="false" />
+    <Property Name="AttendanceDate" Type="datetime" Nullable="false" />
+    <Property Name="Decision" Type="varchar(max)" />
+    <Property Name="Attended" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="Teens">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar(max)" Nullable="false" />
+    <Property Name="LastName" Type="varchar(max)" Nullable="false" />
+    <Property Name="PhoneArea" Type="char" MaxLength="3" />
+    <Property Name="PhonePrefix" Type="char" MaxLength="3" />
+    <Property Name="PhonePostfix" Type="char" MaxLength="4" />
+    <Property Name="Street1" Type="varchar(max)" />
+    <Property Name="Street2" Type="varchar(max)" />
+    <Property Name="City" Type="varchar(max)" />
+    <Property Name="State" Type="varchar(max)" />
+    <Property Name="zip" Type="varchar(max)" />
+    <Property Name="Sex" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="Bus" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="Grade" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="GuestOf" Type="varchar(max)" />
+    <Property Name="GuestOfKey" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_TeenNights_Teens">
+    <End Role="Teens" Type="Self.Teens" Multiplicity="1" />
+    <End Role="TeenNights" Type="Self.TeenNights" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teens">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TeenNights">
+        <PropertyRef Name="TeenId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TeenDataModelStoreContainer">
+    <EntitySet Name="TeenNights" EntityType="Self.TeenNights" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Teens" EntityType="Self.Teens" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_TeenNights_Teens" Association="Self.FK_TeenNights_Teens">
+      <End Role="Teens" EntitySet="Teens" />
+      <End Role="TeenNights" EntitySet="TeenNights" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

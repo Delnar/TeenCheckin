@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
+  <asmv1:assemblyIdentity name="TeenCheckin.exe" version="1.0.0.0" publicKeyToken="a7bbd59839cb998f" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="TeenCheckin" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="TeenCheckin.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="2.0.50727.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Core" version="3.5.0.0" publicKeyToken="b77a5c561934e089" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="WindowsBase" version="3.0.0.0" publicKeyToken="31bf3856ad364e35" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TeenCheckin.exe" size="6656">
+      <assemblyIdentity name="TeenCheckin" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>zm8pCN411Q9pvl0XGxw+5UJHI8o=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+<publisherIdentity name="CN=OTHERLAPTOP\Joshua" issuerKeyHash="8807db79ec618e2b795f22dd5f44edefc8eee6af" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>ywdE9SjwYAlNXyIg6v8WF+mgWRE=</DigestValue></Reference></SignedInfo><SignatureValue>YWRuFXkZFcOAUMGGVv680xYZdZB9a8p2fUq1u+R9C1sLKwU6OxOdTQ7HFuWooJ89Sct/QiL3Z8gxTYiLl3aGNuvxkdvd2xwbUPweWpX5JOpdrfQf3XgnlFnnWBryDbtwnxZGs2zok44pgiyWX3r+R2cc9CNrK/kw0hI5hFdQ0ls=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>p0Viqp76ui9x9QsQq7EqUla1WafESEt3swsFlFRYMoiXdnk/jiHygccdSZlfVfgeP11oEsAvIQIaIQYQMQXg6WKUxZHt9DMZ0cRNIQkIYGXYU4LznKL2M5nbT2zOVu9jKlFpO9djhuagNC5T8EUP9jZYXK9g4CLPsbeHEnC80BU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="1159a0e91716ffea20225f4d0960f028f54407cb" Description="" Url=""><as:assemblyIdentity name="TeenCheckin.exe" version="1.0.0.0" publicKeyToken="a7bbd59839cb998f" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=OTHERLAPTOP\Joshua</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>ev61vfM0wN5jbVbmxAMCfr2j0pc=</DigestValue></Reference></SignedInfo><SignatureValue>e7MVgpIvaT5PBp2h1/iAR9wT3lkGsIUPBID1GP05QHesvjaqGXFATU4TnyPy54Cc/mbtQnxNeDqjgc68edrtW0mScSPPJJ5t4BzGR9/39IDIjJnihLgKfWVKUClH4rc31FedXJoNs38W9aq7N7hBEVpZtjs9KrKmt84k6yA8tXo=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>p0Viqp76ui9x9QsQq7EqUla1WafESEt3swsFlFRYMoiXdnk/jiHygccdSZlfVfgeP11oEsAvIQIaIQYQMQXg6WKUxZHt9DMZ0cRNIQkIYGXYU4LznKL2M5nbT2zOVu9jKlFpO9djhuagNC5T8EUP9jZYXK9g4CLPsbeHEnC80BU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB4TCCAUqgAwIBAgIQEBJ0+yWj8LdEhyxGFOQH+DANBgkqhkiG9w0BAQUFADAvMS0wKwYDVQQDHiQATwBUAEgARQBSAEwAQQBQAFQATwBQAFwASgBvAHMAaAB1AGEwHhcNMDkxMDI2MTUyMjU4WhcNMTAxMDI2MjEyMjU4WjAvMS0wKwYDVQQDHiQATwBUAEgARQBSAEwAQQBQAFQATwBQAFwASgBvAHMAaAB1AGEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKdFYqqe+rovcfULEKuxKlJWtVmnxEhLd7MLBZRUWDKIl3Z5P44h8oHHHUmZX1X4Hj9daBLALyECGiEGEDEF4OlilMWR7fQzGdHETSEJCGBl2FOC85yi9jOZ209szlbvYypRaTvXY4bmoDQuU/BFD/Y2WFyvYOAiz7G3hxJwvNAVAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEAdUyyzJ85hry2sPQMrY4gdRQ0u18OH9xHvJE/MZqIJU4z6txkEc8VUSI2J4gnG+mlda1wCcgs3GHRUczB479NKggnqFhVIq9esM3X1ijb6F8Ytq9pWUWI5sgorSjwtEmUyP/Qr42rQYyYOb6QoOwz7/2Mlql5sYfv/cBN59ybRFw=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
